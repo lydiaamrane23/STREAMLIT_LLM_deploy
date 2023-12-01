@@ -9,7 +9,6 @@ Original file is located at
 
 import numpy as np
 
-!pip install langchain
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile i.pdf
@@ -34,20 +33,17 @@ from langchain.document_loaders import DirectoryLoader,TextLoader
 loader = DirectoryLoader('./',glob="**/*.pdf")
 data = loader.load()
 
-data
 
-!pip install unstructured
+
+
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=4000, chunk_overlap=0)
 docs = text_splitter.split_documents(data)
 
-docs
 
-!pip install openai
 
-!pip install weaviate.Client
 
 from langchain.embeddings.openai import OpenAIEmbeddings
 
@@ -118,11 +114,7 @@ docs = vectorstore.similarity_search(query)
 
 docs
 
-!pip install snowflake
 
-
-
-!pip install streamlit
 
 import streamlit as st
 import pandas as pd
