@@ -16,7 +16,7 @@ client = weaviate.Client(
         "X-OpenAI-Api-Key": openai_key
     }
 )
-rom langchain.vectorstores import Weaviate
+from langchain.vectorstores import Weaviate
 
 
 
@@ -57,7 +57,7 @@ openai_api_key ="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"
 def generate_response(input_text):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     # retrieve text related to the query
-    docs = vectorstore.similarity_search(query)
+    docs = vectorstore.similarity_search(input_text)
     st.info("ok",docs)
 
 with st.form('my_form'):
