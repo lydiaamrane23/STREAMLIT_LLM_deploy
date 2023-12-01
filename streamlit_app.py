@@ -58,7 +58,7 @@ def generate_response(input_text,vectorestore):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     # retrieve text related to the query
     docs = vectorstore.similarity_search(input_text)
-    st.info("ok",docs)
+    st.info("ok",vectorstore )
 
 with st.form('my_form'):
     text = st.text_input('Enter text:')
