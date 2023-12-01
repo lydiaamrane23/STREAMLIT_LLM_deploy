@@ -65,7 +65,7 @@ with st.form('my_form'):
     submitted = st.form_submit_button('Submit')
 
     if submitted and openai_api_key.startswith('sk-'):
-        st.info("ok")
+        st.info(vectorstore )
         
         #generate_response(text,vectorestore)
 
