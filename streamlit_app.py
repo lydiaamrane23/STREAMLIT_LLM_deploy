@@ -7,10 +7,15 @@ import weaviate
 
 
 def get_weaviate_client():
-    weaviate_service = orchest.get_service("weaviate")
+   
+    auth_config = weaviate.AuthApiKey(api_key="test")
     return weaviate.Client(
-        f"http://{weaviate_service['internal_hostname']}:{weaviate_service['ports'][0]}"
-    )
+   url = "http://weaviate:8080",  # Replace with your endpoint
+   auth_client_secret=auth_config,
+   additional_headers = {
+         "X-OpenAI-Api-Key": "test"  # Replace with your inference API key
+     }
+ )
 
 
 def define_schema():
