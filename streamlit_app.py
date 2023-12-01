@@ -54,17 +54,17 @@ st.title('🦜🔗 Quickstart App')
 
 openai_api_key ="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" 
 
-def generate_response(input_text):
+def generate_response(input_text,vectorestore):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     # retrieve text related to the query
     docs = vectorstore.similarity_search(input_text)
     st.info("ok",docs)
 
 with st.form('my_form'):
-    text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
+    text = st.text_input('Enter text:')
     submitted = st.form_submit_button('Submit')
 
     if submitted and openai_api_key.startswith('sk-'):
-        generate_response(text)
+        generate_response(text,vectorestore)
 
 
