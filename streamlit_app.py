@@ -57,6 +57,7 @@ openai_api_key ="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"
 def generate_response(input_text,vectorestore):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
     # retrieve text related to the query
+    
     docs = vectorstore.similarity_search(input_text)
     st.info("ok",vectorstore )
 
