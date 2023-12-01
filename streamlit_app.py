@@ -7,7 +7,7 @@ openai_api_key ="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"
 
 def generate_response(input_text):
     llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-    st.info(llm(input_text))
+    st.info("ok")
 
 with st.form('my_form'):
     text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
