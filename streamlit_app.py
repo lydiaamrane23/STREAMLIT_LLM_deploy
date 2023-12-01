@@ -3,7 +3,7 @@ from langchain.llms import OpenAI
 
 import weaviate
 
-
+openai_api_key ="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"
 
 ## replace EMBEDDEDOPTION BY THIS WHEN i Wwill have information
 #auth_config = weaviate.AuthApiKey(api_key="test")
@@ -13,7 +13,7 @@ import weaviate
 client = weaviate.Client(
     embedded_options=weaviate.EmbeddedOptions(),
     additional_headers={
-        "X-OpenAI-Api-Key": openai_key
+        "X-OpenAI-Api-Key": openai_api_key
     }
 )
 from langchain.vectorstores import Weaviate
