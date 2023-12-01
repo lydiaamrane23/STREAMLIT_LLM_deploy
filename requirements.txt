@@ -1,6 +1,7 @@
 streamlit
 langchain
 openai
+orchest
 
 unstructured
 weaviate.Client
