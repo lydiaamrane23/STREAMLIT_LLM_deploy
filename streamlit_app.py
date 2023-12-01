@@ -34,6 +34,6 @@ if prompt := st.chat_input("What's up at Artelia?"):
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
-        st.markdown("oui")
+       
 
     st.session_state.messages.append({"role": "assistant", "content": "kaka"})
