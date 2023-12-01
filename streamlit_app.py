@@ -1,7 +1,7 @@
 
 import streamlit as st
 import numpy as np
-from snowflake.snowpark.context import get_active_session
+
 
 # Write directly to the app
 st.title("ASK THE DOC APP")
