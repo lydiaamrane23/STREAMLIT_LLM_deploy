@@ -66,7 +66,7 @@ with st.form('my_form'):
 
     if submitted and openai_api_key.startswith('sk-'):
         docs = vectorstore.similarity_search(text)
-        st.info(docs )
+        st.info("ok",docs)
         
         #generate_response(text,vectorestore)
 
